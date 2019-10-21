@@ -27,16 +27,25 @@
       <div id='map'></div>
       
       <script>
-         mapboxgl.accessToken = 'pk.eyJ1IjoidGltYnlzdHJvdiIsImEiOiJjajAzcW1qOGMwMDhtMndyNGhiMWRrZHFsIn0.Hqik7qC05bbSF4NAl0x_RQ';
-          var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/dark-v9'
-          });
 
-          map.flyTo({
-              center: [
-                  -74.50, 40
-              ]
-          })
+     mapboxgl.accessToken = 'pk.eyJ1IjoidGltYnlzdHJvdiIsImEiOiJjajAzcW1qOGMwMDhtMndyNGhiMWRrZHFsIn0.Hqik7qC05bbSF4NAl0x_RQ';
+     var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v9'
+            });
+
+          function onCreate() {
+            
+
+            map.flyTo({
+                center: [
+                    -74.50,
+                    40.0
+                ]
+            });
+          }
+
+          document.addEventListener('DOMContentLoaded', onCreate);
+
       </script>
   </body>
